@@ -67,6 +67,7 @@ public class ArrayTools {
         return minIndex;
     }
 
+
     public static int minCount(int[] pole) {
         int min = pole[0];
         int minCount = 1;
@@ -80,5 +81,33 @@ public class ArrayTools {
         }
         return minCount;
     }
+    /**
+     * @param pole
+     * @return upravene puvodni pole s obracenym poradim prvku
+     */
+    public static int[] reverseArray(int[] pole) 
+    {
+        for (int i = 0; i < pole.length/2; i++) 
+        {
+            int temp = pole[i];
+            pole[i] = pole[pole.length - i - 1];
+            pole[pole.length - i - 1] = temp;
+        }
+        return pole;
+    }
 
+    /**
+     * @param pole
+     * @return nove pole s obracenym poradim prvku
+     */
+
+    public static int[] reverseArray2(int[] pole) 
+    {
+        int[] pole2 = new int[pole.length];
+        for (int i = 0; i < pole.length; i++) 
+        {
+            pole2[i] = pole[pole.length - i - 1];
+        }
+        return pole2;
+    }
 }
