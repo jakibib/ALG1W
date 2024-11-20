@@ -110,4 +110,5 @@ public class ArrayTools {
         }
         return pole2;
     }
+    
 }
